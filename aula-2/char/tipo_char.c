@@ -1,9 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    // Imprimindo o alfabeto
-    for (char i = 'A'; i<'Z'; i++){
-        printf("%c\n", i);
-    }
+    char letra = 'A';
+    printf("%c\n", letra);
+    printf("%d\n", letra);
+    letra = letra + 1;
+    printf("%c\n", letra);
+    printf("%d\n", letra);
+    letra = letra / 2;
+    printf("%c\n", letra);
+    printf("%d\n", letra);
     return 0;
 }

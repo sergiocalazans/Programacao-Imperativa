@@ -7,5 +7,6 @@ int main()
     float area = PI * raio * raio;
     printf("%f\n", area);
     printf("%zu\n", sizeof(float));
+    printf("%zu\n", sizeof(PI));
     return 0;
 }

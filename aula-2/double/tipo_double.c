@@ -7,10 +7,10 @@ int main()
     double area = PI * raio * raio;
     printf("Area: %f\n", area);
 
-    printf("\nLocalidade da memoria\n");
-    printf("%p\n", &area);
-    printf("%p\n", &raio);
-    printf("%p\n", &PI);
+    printf("\nLocalidade na memoria\n");
+    printf("%#X\n", &area);
+    printf("%#X\n", &raio);
+    printf("%#X\n", &PI);
 
     // sizeof para imprimir o tamanho em bytes
     /*

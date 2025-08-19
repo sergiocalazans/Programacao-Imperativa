@@ -21,17 +21,21 @@ int main()
   char *pc = &c;
   bool *pd = &d;
 
-  printf("Valor de a: %d\n", a);
+  printf("\nValor de a: %d\n", a);
   printf("Valor de pa: %p\n", pa);
-
-  printf("Valor de b: %f\n", b);
+  printf("Valor apontado de pa em decimal: %d\n", *pa);
+  printf("-------------------------------------------------------------");
+  printf("\nValor de b: %f\n", b);
   printf("Valor de pb: %p\n", pb);
-
-  printf("Valor de c: %c\n", c);
+  printf("Valor apontado de pb em decimal: %d\n", *pb);
+  printf("-------------------------------------------------------------");
+  printf("\nValor de c: %c\n", c);
   printf("Valor de pc: %p\n", pc);
-
-  printf("Valor de d: %d\n", d);
+  printf("Valor apontado de pc em decimal: %d\n", *pc);
+  printf("-------------------------------------------------------------");
+  printf("\nValor de d: %d\n", d);
   printf("Valor de pd: %p\n", pd);
-
+  printf("Valor apontado de em decimal: %d\n", *pd);
+  printf("-------------------------------------------------------------");
   return 0;
 }

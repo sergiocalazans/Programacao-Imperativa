@@ -3,6 +3,8 @@ int main()
 {
 
     /*
+    Exercício 3.2 
+
     Faça a representação simbólica da memória do
     sistema para as variáveis definidas no programa
     contido no arquivo tipo_char.c

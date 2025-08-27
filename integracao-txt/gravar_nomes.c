@@ -16,7 +16,7 @@ int main()
   FILE *arquivo;
   wchar_t nome[100];
 
-  arquivo = fopen("nomes.txt", "a, ccs=UTF-8"); // garante UTF-8 no Windows
+  arquivo = fopen("nomes.txt", "a");
   if (arquivo == NULL)
   {
     wprintf(L"Erro ao abrir o arquivo!\n");

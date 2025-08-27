@@ -9,18 +9,15 @@ int main(void)
   // --- 1. CONFIGURAÇÃO E ABERTURA DOS ARQUIVOS ---
 
   // Configura o programa para usar a localidade do sistema,
-  // o que é crucial para que towupper() saiba como converter 'é' para 'É'.
   setlocale(LC_ALL, "");
 
   FILE *arquivoEntrada;
   FILE *arquivoSaida;
 
   // Buffer para armazenar cada linha lida do arquivo
-  wchar_t linha[256]; // Usamos wchar_t para suportar acentos
+  wchar_t linha[256]; // wchar_t para suportar acentos
 
   // Abre o arquivo original para leitura.
-  // O modo "r, ccs=UTF-8" é uma instrução (especialmente no Windows) para
-  // ler o arquivo como UTF-8 e converter para wide char.
   arquivoEntrada = fopen("nomes.txt", "r");
   if (arquivoEntrada == NULL)
   {
@@ -29,7 +26,6 @@ int main(void)
   }
 
   // Abre (ou cria) o arquivo de destino para escrita.
-  // O modo "w, ccs=UTF-8" garante que o novo arquivo será salvo em UTF-8.
   arquivoSaida = fopen("nomes_caixa_alta.txt", "w");
   if (arquivoSaida == NULL)
   {

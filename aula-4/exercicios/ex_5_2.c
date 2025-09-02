@@ -1,47 +1,49 @@
-#include <stdio.h>
-
 /*
-Escreva um programa na linguagem C que, dadas três letras distintas
+(5.2) Escreva um programa na linguagem C que, dadas três letras distintas
 fornecidas pelo usuário (via teclado), imprima-as em ordem alfabética.
 Obs: o programa deve certificar-se de que as três letras sejam distintas.
 */
+#include <stdio.h>
 
 int main()
 {
-  char a, b, c;
+  char l1, l2, l3;
 
-  printf("Digite tres letras distintas: ");
-  scanf(" %c %c %c", &a, &b, &c);
-
-  // Verifica se são distintas
-  if (a == b || a == c || b == c)
+  // Loop para garantir que as letras sejam distintas
+  do
   {
-    printf("Erro: as letras devem ser distintas.\n");
-    return 1; // encerra o programa
-  }
+    printf("Digite tres letras distintas: ");
+    // Espaço antes de %c para consumir quebras de linha/espaços anteriores
+    scanf(" %c %c %c", &l1, &l2, &l3);
 
-  // Ordenação simples (bubble sort de 3 elementos)
+    if (l1 == l2 || l1 == l3 || l2 == l3)
+    {
+      printf("Erro: As letras devem ser distintas. Tente novamente.\n");
+    }
+  } while (l1 == l2 || l1 == l3 || l2 == l3);
+
+  // Lógica de ordenação
   char temp;
-  if (a > b)
+  if (l1 > l2)
   {
-    temp = a;
-    a = b;
-    b = temp;
+    temp = l1;
+    l1 = l2;
+    l2 = temp;
   }
-  if (a > c)
+  if (l2 > l3)
   {
-    temp = a;
-    a = c;
-    c = temp;
+    temp = l2;
+    l2 = l3;
+    l3 = temp;
   }
-  if (b > c)
+  if (l1 > l2)
   {
-    temp = b;
-    b = c;
-    c = temp;
+    temp = l1;
+    l1 = l2;
+    l2 = temp;
   }
 
-  printf("Ordem alfabetica: %c %c %c\n", a, b, c);
+  printf("Letras em ordem alfabetica: %c, %c, %c\n", l1, l2, l3);
 
   return 0;
 }

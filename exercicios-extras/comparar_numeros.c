@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
-Escreva um programa na linguagem C que, dados dois números inteiros distintos
-fornecidos pelo usuário (via teclado), imprima-os em ordem crescente.
-Obs: o programa deve certificar-se de que os dois números sejam distintos.
-*/
-
 // Função de comparação usada pelo qsort
 int comparar(const void *a, const void *b)
 {

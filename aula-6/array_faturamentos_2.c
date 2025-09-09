@@ -5,7 +5,7 @@ int main()
 {
 
   // float faturamentos[] = {800.00, 620.00, 900.00, 450.00, 800.00, 780.00};
-  // utilizando o uma constante para definir a quantidade de elementos do vetor com MAX
+  // utilizando uma constante para definir a quantidade de elementos do vetor com MAX
   float faturamentos[MAX];
 
   // Dias da semana
